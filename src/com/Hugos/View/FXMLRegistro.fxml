@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registro.javafx.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16" minWidth="69" />
+      <ImageView fitHeight="490.0" fitWidth="602.0">
+         <image>
+            <Image url="@../Resources/woods.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="235.0" layoutY="22.0" prefHeight="65.0" prefWidth="191.0" text="Registro" textFill="#ffeded">
+         <font>
+            <Font name="System Bold Italic" size="44.0" />
+         </font>
+      </Label>
+      <TextField layoutX="181.0" layoutY="116.0" prefHeight="25.0" prefWidth="254.0" promptText="Nombre(s)*:" />
+      <TextField layoutX="181.0" layoutY="166.0" prefHeight="25.0" prefWidth="254.0" promptText="Apellido Paterno*:" />
+      <TextField layoutX="181.0" layoutY="210.0" prefHeight="25.0" prefWidth="254.0" promptText="Apellido Materno:" />
+      <TextField layoutX="181.0" layoutY="252.0" prefHeight="25.0" prefWidth="254.0" promptText="Nombre Usuario*:" />
+      <TextField layoutX="181.0" layoutY="345.0" prefHeight="25.0" prefWidth="254.0" promptText="Puesto:" />
+      <Button layoutX="133.0" layoutY="404.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="96.0" text="Nuevo">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="269.0" layoutY="404.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="96.0" text="Aceptar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="395.0" layoutY="404.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" text="Regresar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <PasswordField layoutX="181.0" layoutY="303.0" prefHeight="26.0" prefWidth="254.0" promptText="Contraseña:" />
+      <ImageView fitHeight="102.0" fitWidth="173.0" layoutX="10.0" layoutY="10.0">
+         <image>
+            <Image url="@../Resources/hugo.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
