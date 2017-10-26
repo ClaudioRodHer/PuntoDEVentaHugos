@@ -44,8 +44,14 @@ public class HomeCajeroController implements Initializable {
     }
     //-----------------REGISTRO LLEGADA------------------------
     @FXML
-    private void btnRegistroAction(ActionEvent evento){
-    
+    private void btnRegistroAction(ActionEvent evento) throws IOException{
+        Parent llegada=FXMLLoader.load(getClass().getResource("/com/Hugos/View/RegisroEntrada.fxml"));
+        Stage stage =new Stage();
+        Scene scene=new Scene(llegada);
+        stage.setScene(scene);
+        stage.setTitle("LLegada");
+        stage.show();
+        
     }
     //-----------------IMPRIMIR TICKET-----------------------
     @FXML
