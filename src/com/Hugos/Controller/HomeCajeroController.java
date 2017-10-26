@@ -25,7 +25,7 @@ public class HomeCajeroController implements Initializable {
         stage.setScene(scene);
         stage.setTitle("Login");
         stage.show();
-        
+        //soy nacho :V 
     }
     //-------------------QUITAR PRODUCTO--------------------
     @FXML
