@@ -17,8 +17,8 @@ import javafx.stage.Stage;
  *
  * @author root
  */
-public class PuntoDeVenta_HugosPizza extends Application {
-    
+public class PuntoDeVenta_HugosPizza {//extends Application {
+    /*
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
@@ -40,12 +40,10 @@ public class PuntoDeVenta_HugosPizza extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
-    /**
-     * @param args the command line arguments
-     */
+*/
+    
     public static void main(String[] args) {
-        launch(args);
+       // launch(args);
     }
     
 }
