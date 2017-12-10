@@ -1,14 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.View.HomeCajeroController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1400.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.View.HomeCajeroController">
     <stylesheets>
-        <URL value="@homecajero.css"/>
+        <URL value="@homecajero.css" />
     </stylesheets>
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1400.0">
+         <image>
+            <Image url="@../Resources/woods.jpg" />
+         </image>
+      </ImageView>
+      <TabPane layoutX="611.0" layoutY="133.0" prefHeight="587.0" prefWidth="790.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Pizzas" />
+          <Tab text="Alitas" />
+            <Tab text="Hamburguesas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Paquetes Pizzas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Paquetes Alitas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Bebidas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Extras">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="575.0" layoutY="14.0" text="MENU" textFill="#fcf9f9">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="53.0" />
+         </font>
+      </Label>
+      <Button layoutX="78.0" layoutY="617.0" mnemonicParsing="false" text="Imprimir ticket" />
+      <Button layoutX="472.0" layoutY="574.0" mnemonicParsing="false" text="Aceptar orden" />
+      <Label layoutX="1277.0" layoutY="23.0" text="USUARIO" textFill="#eeecec" />
+      <CheckBox layoutX="484.0" layoutY="471.0" mnemonicParsing="false" text="Para llevar" textFill="#f8eeee" />
+      <TableView layoutX="35.0" layoutY="122.0" prefHeight="465.0" prefWidth="357.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="N°" />
+          <TableColumn prefWidth="75.0" text="Cantidad" />
+            <TableColumn prefWidth="126.0" text="Producto" />
+            <TableColumn text="Extras" />
+        </columns>
+      </TableView>
+      <ComboBox layoutX="456.0" layoutY="522.0" prefWidth="150.0" promptText="Repartidores" />
+      <Button layoutX="467.0" layoutY="245.0" mnemonicParsing="false" text="Quitar producto" />
+      <Button layoutX="1307.0" layoutY="58.0" mnemonicParsing="false" text="Cerrar secion" />
+      <ImageView fitHeight="98.0" fitWidth="150.0" layoutX="10.0" layoutY="10.0">
+         <image>
+            <Image url="@../Resources/hugo.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
