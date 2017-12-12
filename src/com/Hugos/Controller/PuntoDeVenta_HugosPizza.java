@@ -16,9 +16,13 @@ public class PuntoDeVenta_HugosPizza {//extends Application {
     
     public static void main(String[] args) { // Hola Nacho esta aqui
        // launch(args); xxfxfxf
+
         System.out.println("Hola mundo soy claudio no se borrar");
         JOptionPane.showMessageDialog(null, "ejeje");
-       
+       int hola;
+
+        System.out.println("Hota a todos");
+
     }
     
 }
