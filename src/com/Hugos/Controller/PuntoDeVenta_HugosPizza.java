@@ -14,6 +14,7 @@ public class PuntoDeVenta_HugosPizza {//extends Application {
     
     public static void main(String[] args) { // Hola Nacho esta aqui
        // launch(args); xxfxfxf
+        System.out.println("Hota a todos");
     }
     
 }
