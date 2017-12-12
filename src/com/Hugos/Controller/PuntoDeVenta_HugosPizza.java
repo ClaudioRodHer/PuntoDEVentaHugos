@@ -13,7 +13,7 @@ public class PuntoDeVenta_HugosPizza {//extends Application {
    public String holaatodos;
     
     public static void main(String[] args) { // Hola Nacho esta aqui
-       // launch(args);
+       // launch(args); xxfxfxf
     }
     
 }
