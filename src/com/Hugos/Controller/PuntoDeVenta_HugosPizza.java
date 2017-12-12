@@ -5,6 +5,8 @@
  */
 package com.Hugos.Controller;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author root
@@ -14,6 +16,9 @@ public class PuntoDeVenta_HugosPizza {//extends Application {
     
     public static void main(String[] args) { // Hola Nacho esta aqui
        // launch(args); xxfxfxf
+        System.out.println("Hola mundo soy claudio no se borrar");
+        JOptionPane.showMessageDialog(null, "ejeje");
+       
     }
     
 }
