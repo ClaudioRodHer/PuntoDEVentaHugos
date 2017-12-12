@@ -23,7 +23,7 @@ public class PuntoDeVenta_HugosPizza {//extends Application {
 
         System.out.println("Hola a todos soy Nacho y si se borra");
         System.out.println("Que paso tehuas");
-
+        System.out.println("Nada Nacho");
     }
     
 }
