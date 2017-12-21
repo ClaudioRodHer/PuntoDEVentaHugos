@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="386.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="com.Hugos.Controller.RegistroEntradaController">
+    <stylesheets>
+        <URL value="@/EstilosCSS/registroentrada.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="386.0" fitWidth="600.0">
+         <image>
+            <Image url="@../Resources/woods.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="97.0" layoutX="10.0" layoutY="10.0">
+         <image>
+            <Image url="@../Resources/hugo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="162.0" layoutY="14.0" text="Registro de Entrada" textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TextField layoutX="138.0" layoutY="101.0" prefHeight="26.0" prefWidth="345.0" promptText="Nombre" />
+      <TextField layoutX="138.0" layoutY="167.0" prefHeight="26.0" prefWidth="345.0" promptText="Apellido Paterno" />
+      <ComboBox layoutX="138.0" layoutY="229.0" prefHeight="26.0" prefWidth="345.0" promptText="Puesto" />
+      <Button layoutX="181.0" layoutY="306.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="238.0" text="Aceptar" />
+   </children>
+</AnchorPane>

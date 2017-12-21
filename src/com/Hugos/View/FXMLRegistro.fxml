@@ -17,7 +17,7 @@
             <Image url="@../Resources/woods.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="235.0" layoutY="22.0" prefHeight="65.0" prefWidth="191.0" text="Registro" textFill="#ffeded">
+      <Label layoutX="235.0" layoutY="22.0" prefHeight="65.0" prefWidth="242.0" text="Registro" textFill="#ffeded">
          <font>
             <Font name="System Bold Italic" size="44.0" />
          </font>
