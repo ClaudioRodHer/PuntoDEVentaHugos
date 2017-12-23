@@ -25,15 +25,15 @@ public class LoginController implements Initializable {
     //el btnAceptarAcion es el nombre que se le dio al boton enn scenebuilder en code-->On Action:btnAceptarAcion
     //ahi es donde se hara la accion del boton para poder hacer el evento del boton
     @FXML
-    private void btnAceptarAcion(ActionEvent evento) throws IOException{
+    private void btnAceptarAction(ActionEvent evento) throws IOException{
         if(txtUsuario.getText().equals("Hugo") && passUsuario.getText().equals("1234")){
             ((Node)(evento.getSource())).getScene().getWindow().hide();//esta linea oculta la ventana anterior
             //apartir de aqui se hace el llamado a la interfaz del menu
-            Parent menu=FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeCajero.fxml"));
+           Parent menu=FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeCajero.fxml"));
             Stage stage=new Stage();
             Scene scene=new Scene(menu);
             stage.setScene(scene);
-            stage.setTitle("Menu");
+            stage.setTitle("Registro de llegada");
             stage.show();
         }else{
         JOptionPane.showMessageDialog(null,"Usuario Incorrecto");
@@ -50,13 +50,13 @@ public class LoginController implements Initializable {
     //-----------BOTON DE REGISTRO DE LA ENTRADA DE LOS EMPLEADOS---------------//
     @FXML
     private void BtnRegistroEntradaAction(ActionEvent evento) throws IOException{
-            ((Node)(evento.getSource())).getScene().getWindow().hide();//esta linea oculta la ventana anterior
+           // ((Node)(evento.getSource())).getScene().getWindow().hide();//esta linea oculta la ventana anterior
             //apartir de aqui se hace el llamado a la interfaz del menu
-            Parent menu=FXMLLoader.load(getClass().getResource("/com/Hugos/View/RegistroEntrada.fxml"));
+            Parent RegEntrada=FXMLLoader.load(getClass().getResource("/com/Hugos/View/RegistroEntrada.fxml"));
             Stage stage=new Stage();
-            Scene scene=new Scene(menu);
+            Scene scene=new Scene(RegEntrada);
             stage.setScene(scene);
-            stage.setTitle("¿Orden para llevar?");
+            stage.setTitle("Registro de llegada");
             stage.show();
     }
 
