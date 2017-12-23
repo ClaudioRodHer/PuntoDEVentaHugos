@@ -17,18 +17,18 @@
             <Image url="@../Resources/woods.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="78.0" layoutY="137.0" prefHeight="25.0" prefWidth="178.0" promptText="Usuario" />
-      <Button layoutX="74.0" layoutY="281.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="81.0" text="Aceptar">
+      <TextField fx:id="txtUsuario" layoutX="36.0" layoutY="137.0" prefHeight="26.0" prefWidth="257.0" promptText="Usuario" />
+      <Button fx:id="BtnAceptar" layoutX="72.0" layoutY="243.0" mnemonicParsing="false" onAction="#btnAceptarAction" prefHeight="30.0" prefWidth="186.0" stylesheets="@../../../EstilosCSS/homecajero.css" text="Aceptar">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="195.0" layoutY="281.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="89.0" text="Cancelar">
+      <Button fx:id="BtnCancelar" layoutX="77.0" layoutY="287.0" mnemonicParsing="false" onAction="#BtnCancelarAction" prefHeight="30.0" prefWidth="186.0" text="Cancelar">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <PasswordField layoutX="78.0" layoutY="202.0" prefHeight="25.0" prefWidth="178.0" promptText="Contraseña" />
+      <PasswordField fx:id="passUsuario" layoutX="36.0" layoutY="182.0" prefHeight="26.0" prefWidth="257.0" promptText="Contraseña" />
       <Label layoutX="111.0" layoutY="74.0" text="Login" textFill="#ebe5e5">
          <font>
             <Font name="System Bold Italic" size="38.0" />
@@ -39,5 +39,6 @@
             <Image url="@../Resources/hugo.png" />
          </image>
       </ImageView>
+      <Button fx:id="BtnRegistroEntrada" layoutX="5.0" layoutY="389.0" mnemonicParsing="false" onAction="#BtnRegistroEntradaAction" text="Registro Entrada" />
     </children>
 </AnchorPane>

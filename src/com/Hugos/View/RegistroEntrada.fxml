@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="386.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="com.Hugos.Controller.RegistroEntradaController">
+<AnchorPane id="AnchorPane" prefHeight="386.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.Controller.RegistroEntradaController">
     <stylesheets>
         <URL value="@/EstilosCSS/registroentrada.css" />
     </stylesheets>
@@ -30,9 +30,9 @@
             <Font size="31.0" />
          </font>
       </Label>
-      <TextField layoutX="138.0" layoutY="101.0" prefHeight="26.0" prefWidth="345.0" promptText="Nombre" />
-      <TextField layoutX="138.0" layoutY="167.0" prefHeight="26.0" prefWidth="345.0" promptText="Apellido Paterno" />
-      <ComboBox layoutX="138.0" layoutY="229.0" prefHeight="26.0" prefWidth="345.0" promptText="Puesto" />
-      <Button layoutX="181.0" layoutY="306.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="238.0" text="Aceptar" />
+      <TextField fx:id="txtNombre" layoutX="138.0" layoutY="101.0" prefHeight="26.0" prefWidth="345.0" promptText="Nombre" />
+      <TextField fx:id="txtApellido1" layoutX="138.0" layoutY="167.0" prefHeight="26.0" prefWidth="345.0" promptText="Apellido Paterno" />
+      <ComboBox fx:id="cmbPuesto" layoutX="138.0" layoutY="229.0" prefHeight="26.0" prefWidth="345.0" promptText="Puesto" />
+      <Button fx:id="btnAceptar" layoutX="181.0" layoutY="306.0" mnemonicParsing="false" onAction="#BtnAceptarAction" prefHeight="39.0" prefWidth="238.0" text="Aceptar" />
    </children>
 </AnchorPane>
