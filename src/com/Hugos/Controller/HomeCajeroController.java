@@ -12,21 +12,24 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author root
- */
 public class HomeCajeroController implements Initializable {
     
-    //-----------------CERRAR SECION------------------
+    //-----------------CERRAR SESION------------------
     @FXML
-    private void btnCerrarSecionAction(ActionEvent evento){
-    
+    private void btnCerrarSecionAction(ActionEvent evento) throws IOException{
+        ((Node)(evento.getSource())).getScene().getWindow().hide();
+        Parent cerrarS =FXMLLoader.load(getClass().getResource("/com/Hugos/View/LoginBien.fxml"));
+        Stage stage=new Stage();
+        Scene scene=new Scene(cerrarS);
+        stage.setScene(scene);
+        stage.setTitle("Login");
+        stage.show();
+        
     }
     //-------------------QUITAR PRODUCTO--------------------
     @FXML
@@ -53,6 +56,8 @@ public class HomeCajeroController implements Initializable {
     private void btnImprimirticketAction(ActionEvent evento){
     
     }
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
