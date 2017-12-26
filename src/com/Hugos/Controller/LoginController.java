@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
@@ -34,6 +35,7 @@ public class LoginController implements Initializable {
             Scene scene=new Scene(menu);
             stage.setScene(scene);
             stage.setTitle("Registro de llegada");
+            stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
             stage.show();
         }else{
         JOptionPane.showMessageDialog(null,"Usuario Incorrecto");
