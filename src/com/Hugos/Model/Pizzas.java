@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class Pizzas extends Application{
     private int id_Pizza;
-    public String SiMeActualizo;
+
 
     @Override
     public void start(Stage primaryStage) throws IOException {
