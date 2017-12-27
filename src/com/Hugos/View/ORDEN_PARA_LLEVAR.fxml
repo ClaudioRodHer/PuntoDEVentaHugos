@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="356.0" prefWidth="349.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.Controller.ORDEN_PARA_LLEVARController">
+<AnchorPane id="AnchorPane" prefHeight="356.0" prefWidth="349.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.Controller.ORDEN_PARA_LLEVARController">
     <stylesheets>
         <URL value="@/EstilosCSS/orden_para_llevar.css" />
     </stylesheets>
@@ -24,9 +24,9 @@
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="111.0" layoutY="177.0" mnemonicParsing="false" text="SI" />
+      <Button fx:id="btnSi" layoutX="111.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnSiAction" onKeyPressed="#siKeyPressed" text="SI" />
       <Button layoutX="205.0" layoutY="177.0" mnemonicParsing="false" text="No" />
-      <ComboBox layoutX="96.0" layoutY="237.0" prefHeight="29.0" prefWidth="179.0" promptText="Seleccione Repartidor" />
+      <ComboBox fx:id="cmbSeleccionR" disable="true" layoutX="96.0" layoutY="237.0" onAction="#cmbSeleccionRAction" prefHeight="29.0" prefWidth="179.0" promptText="Seleccione Repartidor" />
       <Button layoutX="138.0" layoutY="292.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="94.0" text="Aceptar" />
       <ImageView fitHeight="75.0" fitWidth="116.0" layoutX="127.0" layoutY="14.0">
          <image>
