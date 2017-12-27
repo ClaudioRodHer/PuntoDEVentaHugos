@@ -40,5 +40,6 @@
          </image>
       </ImageView>
       <Button fx:id="BtnRegistroEntrada" layoutX="5.0" layoutY="389.0" mnemonicParsing="false" onAction="#BtnRegistroEntradaAction" text="Registro Entrada" />
+      <Button layoutY="-4.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="43.0" text="?" />
     </children>
 </AnchorPane>
