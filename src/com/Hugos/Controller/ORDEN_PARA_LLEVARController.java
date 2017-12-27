@@ -18,7 +18,7 @@ import javafx.fxml.Initializable;
  * @author NACHO
  */
 public class ORDEN_PARA_LLEVARController implements Initializable {
-/*
+
     @FXML
     private ComboBox cmbSeleccionR;
     @FXML
@@ -27,7 +27,7 @@ public class ORDEN_PARA_LLEVARController implements Initializable {
     private void btnSiAction(ActionEventent evento ){
         cmbSeleccionR.disableProperty();
     }
-   */
+   
     @Override
    
     public void initialize(URL url, ResourceBundle rb) {
