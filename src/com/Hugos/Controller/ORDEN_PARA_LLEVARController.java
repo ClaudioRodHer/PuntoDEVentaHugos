@@ -7,7 +7,10 @@ package com.Hugos.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+//import javafx.event.ActionEvent;
+//import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+//import javafx.scene.control.ComboBox;
 
 /**
  * FXML Controller class
@@ -15,11 +18,18 @@ import javafx.fxml.Initializable;
  * @author NACHO
  */
 public class ORDEN_PARA_LLEVARController implements Initializable {
-
-    /**
-     * Initializes the controller class.
-     */
+/*
+    @FXML
+    private ComboBox cmbSeleccionR;
+    @FXML
+    
+    
+    private void btnSiAction(ActionEventent evento ){
+        cmbSeleccionR.disableProperty();
+    }
+   */
     @Override
+   
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
