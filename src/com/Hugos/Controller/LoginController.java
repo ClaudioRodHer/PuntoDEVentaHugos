@@ -23,7 +23,7 @@ public class LoginController implements Initializable {
     @FXML
     private PasswordField passUsuario;
     //----------------------BOTON ACEPTAR--------------------------------------//
-    //el btnAceptarAcion es el nombre que se le dio al boton enn scenebuilder en code-->On Action:btnAceptarAcion
+    //el btnAceptarAction es el nombre que se le dio al boton enn scenebuilder en code-->On Action:btnAceptarAcion
     //ahi es donde se hara la accion del boton para poder hacer el evento del boton
     @FXML
     private void btnAceptarAction(ActionEvent evento) throws IOException{
