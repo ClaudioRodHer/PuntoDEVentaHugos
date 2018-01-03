@@ -3,10 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream
             <file>file:/root/NetBeansProjects/PuntoDeVenta_HugosPizza/src/com/Hugos/Controller/LoginController.java</file>
             <file>file:/root/NetBeansProjects/PuntoDeVenta_HugosPizza/src/com/Hugos/View/HomeCajero.fxml</file>
             <file>file:/root/NetBeansProjects/PuntoDeVenta_HugosPizza/src/com/Hugos/ConectionDB/ConeccionUsers.java</file>
             <file>file:/root/NetBeansProjects/PuntoDeVenta_HugosPizza/src/com/Hugos/Controller/HomeCajeroController.java</file>
+=======
+            <file>file:/home/Andres/NetBeansProjects/PuntoDE_VentaHugos/src/com/Hugos/Controller/LoginController.java</file>
+            <file>file:/home/Andres/NetBeansProjects/PuntoDE_VentaHugos/src/com/Hugos/Controller/ORDEN_PARA_LLEVARController.java</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>
