@@ -18,8 +18,7 @@ import javafx.scene.control.Label;
  */
 public class HomeAdminController implements Initializable {
     
-    S
-    
+ 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
