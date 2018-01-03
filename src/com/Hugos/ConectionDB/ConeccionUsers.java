@@ -1,6 +1,4 @@
 package com.Hugos.ConectionDB;
-import java.sql.*;
-import javax.swing.JOptionPane;
 
 public class ConeccionUsers {
     
