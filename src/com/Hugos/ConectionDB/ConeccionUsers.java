@@ -3,7 +3,13 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 
 public class ConeccionUsers {
-    private Connection conexion=null;
+    
+
+}
+    
+    
+/**
+ private Connection conexion=null;
     private Statement stmt;
     private ResultSet rs;
     private String BD="",Usuario="root",Contrasena="",URL="jdbc:mysql://localhost:",Puerto="3306";
@@ -113,9 +119,6 @@ public class ConeccionUsers {
     public Connection GetConexion(){
         return this.conexion;
     }
-
-}
-    
-    
-
+ 
+ * /
 
