@@ -34,7 +34,15 @@ public class LoginController implements Initializable {
             Stage stage=new Stage();
             Scene scene=new Scene(menu);
             stage.setScene(scene);
-            stage.setTitle("Registro de llegada");
+            stage.setTitle("Menu");
+            stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
+            stage.show();
+        }else if(txtUsuario.getText().equals("yo") && passUsuario.getText().equals("1234")){
+        Parent admin=FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeAdmin.fxml"));
+            Stage stage=new Stage();
+            Scene scene=new Scene(admin);
+            stage.setScene(scene);
+            stage.setTitle("Administrador");
             stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
             stage.show();
         }else{
