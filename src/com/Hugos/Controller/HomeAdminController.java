@@ -10,12 +10,15 @@ import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 
 /**
+ * FXML Controller class
  *
- * @author Madisson
+ * @author root
  */
 public class HomeAdminController implements Initializable {
-    
- 
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
