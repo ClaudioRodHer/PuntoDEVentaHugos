@@ -69,7 +69,16 @@ public class LoginController implements Initializable {
             stage.setTitle("Registro de llegada");
             stage.show();
     }
-
+    //---------------------BTNREGUSUARIO----------------------------------
+    @FXML
+    private void btnReguserAction(ActionEvent evento) throws IOException{
+        Parent regEmp=FXMLLoader.load(getClass().getResource("/com/Hugos/View/AgregarEmpleado.fxml"));
+        Stage stage=new Stage();
+        Scene scene=new Scene(regEmp);
+        stage.setScene(scene);
+        stage.setTitle("Registro de empleados");
+        stage.show();
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
