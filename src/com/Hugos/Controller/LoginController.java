@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -22,6 +23,7 @@ public class LoginController implements Initializable {
     private TextField txtUsuario;
     @FXML
     private PasswordField passUsuario;
+
     //----------------------BOTON ACEPTAR--------------------------------------//
     //el btnAceptarAction es el nombre que se le dio al boton enn scenebuilder en code-->On Action:btnAceptarAcion
     //ahi es donde se hara la accion del boton para poder hacer el evento del boton
@@ -72,6 +74,8 @@ public class LoginController implements Initializable {
     //---------------------BTNREGUSUARIO----------------------------------
     @FXML
     private void btnReguserAction(ActionEvent evento) throws IOException{
+       
+       
         Parent regEmp=FXMLLoader.load(getClass().getResource("/com/Hugos/View/AgregarEmpleado.fxml"));
         Stage stage=new Stage();
         Scene scene=new Scene(regEmp);

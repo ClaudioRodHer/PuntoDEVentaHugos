@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 public class AgregarEmpleadoController implements Initializable {
@@ -23,20 +24,23 @@ public class AgregarEmpleadoController implements Initializable {
     @FXML
     private TextField txtTelefono;
     @FXML
-    private TextField txtPuesto;
+    private ComboBox cmbPuesto;
+    
     @FXML
-    private TextField txtNumE;
-
+    private TextField txtContraseña;
+    
     @FXML
     private void btnAgregarAction() throws ClassNotFoundException {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/HugosDB", "root", "");
             Statement estado = (Statement) con.createStatement();
-            estado.executeUpdate("INSERT INTO empleado(nombre,apellido1,apellido2,telefono,puesto) VALUES('" 
+            estado.executeUpdate("INSERT INTO empleado(nombre,apellido1,apellido2,telefono,puesto,Contraseña) VALUES('" 
                     + txtNombre.getText() + "',"
                     + "'" + txtApePat.getText() + "'"
-                    + ",'" + txtApeMat.getText() + "','" + txtTelefono.getText() + "','" + txtPuesto.getText() + "')");
+                    + ",'" + txtApeMat.getText() + "','" + txtTelefono.getText() + "','" + cmbPuesto.getSelectionModel().getSelectedItem()+"','"+
+                            txtContraseña.getText()+"')");
+            
         } catch (SQLException ex) {
             System.out.println("Error en MySQL: " + ex.getMessage());
         } catch (ClassNotFoundException err) {
@@ -53,7 +57,7 @@ public class AgregarEmpleadoController implements Initializable {
 
     @FXML
     private void btnModificarAction(ActionEvent evento) {
-        txtNumE.editableProperty();
+       
     }
 
     @FXML
@@ -63,7 +67,7 @@ public class AgregarEmpleadoController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        cmbPuesto.getItems().addAll("Administrador","Cajero","Repartidor");
     }
 
 }
