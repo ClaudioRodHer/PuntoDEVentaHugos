@@ -47,7 +47,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="tabla" layoutX="14.0" layoutY="14.0" onSort="#tblTablaAction" prefHeight="339.0" prefWidth="662.0">
+                        <TableView fx:id="tabla" layoutX="14.0" layoutY="14.0" prefHeight="339.0" prefWidth="662.0">
                           <columns>
                             <TableColumn prefWidth="103.0" text="N° Empleado" />
                             <TableColumn prefWidth="83.0" text="Nombre" />
