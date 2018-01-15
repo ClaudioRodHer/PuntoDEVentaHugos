@@ -2,63 +2,97 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.Glow?>
-<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="339.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.Controller.HomeAdminController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.Controller.HomeAdminController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="678.0" fitWidth="966.0" layoutX="-47.0" layoutY="-38.0">
          <image>
-            <Image url="@../../índice.jpg" />
+            <Image url="@../Resources/woods.jpg" />
          </image>
       </ImageView>
-      <BorderPane layoutX="14.0" layoutY="70.0" prefHeight="200.0" prefWidth="586.0">
-         <left>
-            <ComboBox prefWidth="150.0" promptText="--seleccione una opcion--" visibleRowCount="15" BorderPane.alignment="CENTER">
-               <effect>
-                  <Glow />
-               </effect>
-            </ComboBox>
-         </left>
-         <center>
-            <ImageView fitHeight="179.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-               <image>
-                  <Image url="@../../plantilla.jpg" />
-               </image>
-               <effect>
-                  <SepiaTone level="0.31" />
-               </effect>
-            </ImageView>
-         </center>
-      </BorderPane>
-      <Button layoutX="28.0" layoutY="270.0" mnemonicParsing="false" text="SALIR">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Label layoutX="180.0" layoutY="14.0" text="HUGO'S PIZZA" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
-         <font>
-            <Font name="Blackadder ITC" size="29.0" />
-         </font>
-         <textFill>
-            <RadialGradient centerX="0.4777777777777778" centerY="0.6047619047619048" radius="0.5">
-               <stops>
-                  <Stop color="WHITE" />
-                  <Stop color="WHITE" offset="0.41379310344827586" />
-                  <Stop color="BLACK" offset="0.639846743295019" />
-                  <Stop color="BLACK" offset="1.0" />
-               </stops>
-            </RadialGradient>
-         </textFill>
-      </Label>
-      <Label text="Label" />
+      <TabPane layoutX="14.0" layoutY="90.0" prefHeight="544.0" prefWidth="904.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Horarios">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="54.0" layoutY="188.0" prefHeight="278.0" prefWidth="632.0">
+                          <columns>
+                            <TableColumn prefWidth="161.0" text="Nombre " />
+                            <TableColumn prefWidth="150.0" text="Cargo" />
+                              <TableColumn prefWidth="163.0" text="Enteada" />
+                              <TableColumn prefWidth="157.0" text="Salida" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Nomina">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabla" layoutX="56.0" layoutY="158.0" prefHeight="339.0" prefWidth="662.0">
+                           <columns>
+                              <TableColumn prefWidth="103.0" text="N° Empleado" />
+                              <TableColumn prefWidth="83.0" text="Nombre" />
+                              <TableColumn prefWidth="133.0" text="Apellido paterno" />
+                              <TableColumn prefWidth="143.0" text="Apellido Materno" />
+                              <TableColumn prefWidth="86.0" text="Telefono" />
+                              <TableColumn prefWidth="113.0" text="Puesto" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Estadisticas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Stock">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Corte de caja">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Registrar empleado">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="453.0" prefWidth="792.0">
+                           <children>
+                              <Button fx:id="btnEliminar" layoutX="558.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnEliminarAction" text="Eliminar" />
+                              <Button fx:id="btnModificar" layoutX="396.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnModificarAction" text="Modificar" />
+                              <Button fx:id="btnNuevo" layoutX="270.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnNuevoAction" text="Nuevo" />
+                              <Button fx:id="btnAgregar" layoutX="82.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnAgregarAction" text="Agregar" />
+                              <ComboBox fx:id="cmbPuesto" layoutX="367.0" layoutY="129.0" prefWidth="150.0" promptText="Puestos" />
+                              <TextField fx:id="txtContraseña" layoutX="126.0" layoutY="201.0" prefHeight="26.0" prefWidth="168.0" promptText="Contraseña" />
+                              <TextField fx:id="txtTelefono" layoutX="125.0" layoutY="164.0" promptText="Telefono" />
+                              <TextField fx:id="txtApeMat" layoutX="125.0" layoutY="129.0" promptText="Apellido Materno" />
+                              <TextField fx:id="txtApePat" layoutX="125.0" layoutY="94.0" promptText="Apellido Paterno" />
+                              <TextField fx:id="txtNombre" layoutX="125.0" layoutY="59.0" promptText="Nombre" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
    </children>
 </Pane>
