@@ -38,7 +38,7 @@ public class AgregarEmpleadoController implements Initializable {
 
     @FXML
     private void btnAgregarAction() throws ClassNotFoundException {
-        try {
+        /*try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/HugosDB", "root", "");
             Statement estado = (Statement) con.createStatement();
@@ -58,7 +58,7 @@ public class AgregarEmpleadoController implements Initializable {
             err.printStackTrace();
         } catch (Exception err) {
             System.out.println("se ha encontrado un error inesperado que es " + err.getMessage());
-        }
+        }*/
     }
 
     @FXML
