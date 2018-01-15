@@ -49,7 +49,7 @@ public class AgregarEmpleadoController implements Initializable {
                     + cmbPuesto.getSelectionModel().getSelectedItem() + "','"
                     + txtContraseña.getText() + "')");
             
-            mostrar();
+           // mostrar();
             
 
         } catch (SQLException ex) {

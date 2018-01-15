@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 public class HomeCajeroController implements Initializable {
     
-    //-----------------CERRAR SESION------------------
+    //-----------------CERRAR SESION---mostrar()---------------
     @FXML
     private void btnCerrarSecionAction(ActionEvent evento) throws IOException{
         ((Node)(evento.getSource())).getScene().getWindow().hide();
