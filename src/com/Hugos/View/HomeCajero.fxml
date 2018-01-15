@@ -12,12 +12,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="682.0" prefWidth="1337.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.Controller.HomeCajeroController">
+<AnchorPane id="AnchorPane" prefHeight="682.0" prefWidth="1337.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.Controller.HomeCajeroController">
     <stylesheets>
         
     </stylesheets>
    <children>
-      <ImageView fitHeight="700.0" fitWidth="1400.0">
+      <ImageView fitHeight="766.0" fitWidth="1460.0">
          <image>
             <Image url="@../Resources/woods.jpg" />
          </image>
