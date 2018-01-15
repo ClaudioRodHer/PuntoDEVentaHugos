@@ -28,10 +28,10 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="54.0" layoutY="188.0" prefHeight="278.0" prefWidth="632.0">
+                        <TableView layoutX="110.0" layoutY="161.0" prefHeight="278.0" prefWidth="632.0">
                           <columns>
                             <TableColumn prefWidth="161.0" text="Nombre " />
-                            <TableColumn prefWidth="150.0" text="Cargo" />
+                            <TableColumn prefWidth="150.0" text="Puesto" />
                               <TableColumn prefWidth="163.0" text="Enteada" />
                               <TableColumn prefWidth="157.0" text="Salida" />
                           </columns>
