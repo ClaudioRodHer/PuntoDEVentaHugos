@@ -47,29 +47,37 @@ public class LoginController implements Initializable {
             while (rs.next()) {
                 tipus = rs.getString("Puesto");
             }
-            if (tipus.equals("Administrador")) {
-                Parent adm = FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeAdmin.fxml"));
-                Stage stage = new Stage();
-                Scene scene = new Scene(adm);
-                stage.setScene(scene);
-                stage.setTitle("Administrador");
-                stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
-                stage.show();
-            } else if (tipus.equals("Cajero")) {
-                ((Node) (evento.getSource())).getScene().getWindow().hide();//esta linea oculta la ventana anterior
-                //apartir de aqui se hace el llamado a la interfaz del menu
-                Parent menu = FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeCajero.fxml"));
-                Stage stage = new Stage();
-                Scene scene = new Scene(menu);
-                stage.setScene(scene);
-                stage.setTitle("Menu");
-                stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
-                stage.show();
-            }else {
-            JOptionPane.showMessageDialog(null, "Usuario Incorrecto");
-            txtUsuario.setText("");
-            passUsuario.setText("");
-        }
+            switch (tipus) {
+                case "Administrador":
+                    {
+                        Parent adm = FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeAdmin.fxml"));
+                        Stage stage = new Stage();
+                        Scene scene = new Scene(adm);
+                        stage.setScene(scene);
+                        stage.setTitle("Administrador");
+                        stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
+                        stage.show();
+                        break;
+                    }
+                case "Cajero":
+                    {
+                        ((Node) (evento.getSource())).getScene().getWindow().hide();//esta linea oculta la ventana anterior
+                        //apartir de aqui se hace el llamado a la interfaz del menu
+                        Parent menu = FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeCajero.fxml"));
+                        Stage stage = new Stage();
+                        Scene scene = new Scene(menu);
+                        stage.setScene(scene);
+                        stage.setTitle("Menu");
+                        stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
+                        stage.show();
+                        break;
+                    }
+                default:
+                    JOptionPane.showMessageDialog(null, "Usuario Incorrecto");
+                    txtUsuario.setText("");
+                    passUsuario.setText("");
+                    break;
+            }
         } catch (Exception e) {
         }
 
