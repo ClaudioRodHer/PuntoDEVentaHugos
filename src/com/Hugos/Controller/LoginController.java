@@ -1,7 +1,11 @@
 package com.Hugos.Controller;
 
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,7 +33,17 @@ public class LoginController implements Initializable {
     //ahi es donde se hara la accion del boton para poder hacer el evento del boton
     @FXML
     private void btnAceptarAction(ActionEvent evento) throws IOException{
-        if(txtUsuario.getText().equals("Hugo") && passUsuario.getText().equals("1234")){
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/HugosDB", "root", "");
+            Statement admin = (Statement) con.createStatement();
+           admin.executeQuery("SELECT nombre FROM empleado WHERE Puesto='Administrador';");
+           Statement cajero = (Statement) con.createStatement();
+           cajero.executeQuery("SELECT nombre,Contrasena FROM empleado WHERE Puesto='Cajero';");
+           Statement Cu=(Statement) con.createStatement();
+           
+           // mostrar();
+            if(txtUsuario.equals(cajero) && passUsuario.equals(cajero)){
             ((Node)(evento.getSource())).getScene().getWindow().hide();//esta linea oculta la ventana anterior
             //apartir de aqui se hace el llamado a la interfaz del menu
            Parent menu=FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeCajero.fxml"));
@@ -39,10 +53,10 @@ public class LoginController implements Initializable {
             stage.setTitle("Menu");
             stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
             stage.show();
-        }else if(txtUsuario.getText().equals("yo") && passUsuario.getText().equals("1234")){
-        Parent admin=FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeAdmin.fxml"));
+            }else if(txtUsuario.equals(admin) && passUsuario.getText().equals("1234")){
+            Parent adm=FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeAdmin.fxml"));
             Stage stage=new Stage();
-            Scene scene=new Scene(admin);
+            Scene scene=new Scene(adm);
             stage.setScene(scene);
             stage.setTitle("Administrador");
             stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
@@ -52,6 +66,17 @@ public class LoginController implements Initializable {
         txtUsuario.setText("");
         passUsuario.setText("");
         }
+
+        } catch (SQLException ex) {
+            System.out.println("Error en MySQL: " + ex.getMessage());
+        } catch (ClassNotFoundException err) {
+            err.printStackTrace();
+        } catch (Exception err) {
+            System.out.println("se ha encontrado un error inesperado que es " + err.getMessage());
+        }
+        //if(txtUsuario.getText().equals("Hugo") && passUsuario.getText().equals("1234")){
+            
+        
     }
     //-----------BOTON DE CANCELAR--------------------------------//
     @FXML
