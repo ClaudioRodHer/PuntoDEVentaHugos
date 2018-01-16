@@ -3,6 +3,7 @@ package com.Hugos.Controller;
 
 import com.Hugos.ConectionDB.ConeccionUsers;
 import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -10,10 +11,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
@@ -33,8 +36,34 @@ public class LoginController implements Initializable {
     
     @FXML
     private void btnAceptarAction(ActionEvent evento) throws IOException{
-       
-        
+       //Statement admin = (Statement) con.createStatement();
+           String admins="SELECT nombre,Contrasena FROM empleado WHERE Puesto='Administrador';";
+           //Statement cajero = (Statement) con.createStatement();
+           String cajero="SELECT nombre,Contrasena FROM empleado WHERE Puesto='Cajero';";
+           
+        if(txtUsuario.getText().equals(cajero) && passUsuario.getText().equals(cajero)){
+            ((Node)(evento.getSource())).getScene().getWindow().hide();//esta linea oculta la ventana anterior
+            //apartir de aqui se hace el llamado a la interfaz del menu
+           Parent menu=FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeCajero.fxml"));
+            Stage stage=new Stage();
+            Scene scene=new Scene(menu);
+            stage.setScene(scene);
+            stage.setTitle("Menu");
+            stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
+            stage.show();
+            }else if(txtUsuario.getText().equals(admins) && passUsuario.getText().equals("1234")){
+            Parent adm=FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeAdmin.fxml"));
+            Stage stage=new Stage();
+            Scene scene=new Scene(adm);
+            stage.setScene(scene);
+            stage.setTitle("Administrador");
+            stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
+            stage.show();
+        }else{
+        JOptionPane.showMessageDialog(null,"Usuario Incorrecto");
+        txtUsuario.setText("");
+        passUsuario.setText("");
+        }
     }
     //-----------BOTON DE CANCELAR--------------------------------//
     @FXML
