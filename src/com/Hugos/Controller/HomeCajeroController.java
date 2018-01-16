@@ -14,7 +14,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class HomeCajeroController implements Initializable {
-    
+    //sjfsof
     //-----------------CERRAR SESION---mostrar()---------------
     @FXML
     private void btnCerrarSecionAction(ActionEvent evento) throws IOException{

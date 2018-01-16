@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -14,6 +12,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.Controller.HomeAdminController">
    <children>
@@ -28,10 +27,10 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="110.0" layoutY="161.0" prefHeight="278.0" prefWidth="632.0">
+                        <TableView layoutX="54.0" layoutY="188.0" prefHeight="278.0" prefWidth="632.0">
                           <columns>
                             <TableColumn prefWidth="161.0" text="Nombre " />
-                            <TableColumn prefWidth="150.0" text="Puesto" />
+                            <TableColumn prefWidth="150.0" text="Cargo" />
                               <TableColumn prefWidth="163.0" text="Enteada" />
                               <TableColumn prefWidth="157.0" text="Salida" />
                           </columns>
@@ -65,70 +64,47 @@
             </Tab>
             <Tab text="Stock">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <AnchorPane layoutX="-10.0" layoutY="-1.0" prefHeight="512.0" prefWidth="918.0">
-                           <children>
-                              <Button layoutX="91.0" layoutY="36.0" mnemonicParsing="false" text="Ver Todo">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                              <TextField layoutX="91.0" layoutY="78.0" prefHeight="26.0" prefWidth="231.0" promptText="ingresa producto">
-                                 <cursor>
-                                    <Cursor fx:constant="TEXT" />
-                                 </cursor>
-                              </TextField>
-                              <TableView layoutX="59.0" layoutY="114.0" prefHeight="330.0" prefWidth="730.0">
-                                 <columns>
-                                    <TableColumn prefWidth="75.0" text="N°" />
-                                    <TableColumn prefWidth="257.0" text="Nombre" />
-                                    <TableColumn prefWidth="272.0" text="Descripcion" />
-                                    <TableColumn prefWidth="125.0" text="Cantidad" />
-                                 </columns>
-                              </TableView>
-                              <Button layoutX="343.0" layoutY="78.0" mnemonicParsing="false" text="Buscar">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                              <Button layoutX="99.0" layoutY="472.0" mnemonicParsing="false" text="Volver">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                              <Button layoutX="230.0" layoutY="472.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="243.0" text="Ver Estadisticas">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                              <Button layoutX="551.0" layoutY="472.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="208.0" text="Ingresar producto">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                              <SplitMenuButton layoutX="447.0" layoutY="36.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="243.0" text="--Ver por producto--">
-                                 <items>
-                                    <MenuItem mnemonicParsing="false" text="Action 1" />
-                                    <MenuItem mnemonicParsing="false" text="Action 2" />
-                                 </items>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </SplitMenuButton>
-                              <Button layoutX="697.0" layoutY="36.0" mnemonicParsing="false" stylesheets="@../../../../../Stock/src/60f41dbd-467e-4138-a37c-8ecdc621d501/buttons/code/stylesheets/main.css" text="Aceptar">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                        </AnchorPane>
-                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
             <Tab text="Corte de caja">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="59.0" layoutY="51.0" prefHeight="35.0" prefWidth="79.0" text="FECHA:" textFill="#fcf6f6">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="138.0" layoutY="56.0" />
+                        <ComboBox layoutX="308.0" layoutY="56.0" prefWidth="150.0" promptText="Diariamente" />
+                        <Label layoutX="479.0" layoutY="54.0" text="USUARIO:" textFill="#fcf6f6">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox layoutX="577.0" layoutY="57.0" prefWidth="150.0" promptText="Admin" />
+                        <Label layoutX="59.0" layoutY="141.0" text="Cantidad Inicial: $" textFill="#fffdfd">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="197.0" layoutY="142.0" />
+                        <Button layoutX="448.0" layoutY="135.0" mnemonicParsing="false" text="Procesar Corte de Caja" textFill="#363434">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <TableView layoutX="89.0" layoutY="201.0" prefHeight="200.0" prefWidth="662.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="N.C." />
+                            <TableColumn prefWidth="314.0" text="Descripcion" />
+                              <TableColumn minWidth="0.0" prefWidth="74.0" text="Ingreso" />
+                              <TableColumn prefWidth="103.0" text="Egreso" />
+                              <TableColumn prefWidth="94.0" text="Saldo" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
               </content>
             </Tab>
             <Tab text="Registrar empleado">

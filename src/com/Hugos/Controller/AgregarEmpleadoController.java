@@ -123,7 +123,7 @@ public class AgregarEmpleadoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         cmbPuesto.getItems().addAll("Administrador", "Cajero", "Repartidor");
-       
+       //nel
     }
 
 }

@@ -13,7 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
+//nel
 public class RegistroEntradaController implements Initializable {
 @FXML
 private TextField txtNombre;
