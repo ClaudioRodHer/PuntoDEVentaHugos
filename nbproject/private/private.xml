@@ -1,29 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> master
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/Andres/NetBeansProjects/PuntoDE_VentaHugos/src/com/Hugos/Model/Empleados.java</file>
-            <file>file:/home/Andres/NetBeansProjects/PuntoDE_VentaHugos/src/com/Hugos/Controller/AgregarEmpleadoController.java</file>
+            <file>file:/home/Andres/NetBeansProjects/PuntoDE_VentaHugos/src/com/Hugos/Controller/LoginController.java</file>
         </group>
     </open-files>
 </project-private>
-<<<<<<< HEAD
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/NACHO/Documents/NetBeansProjects/PuntoDE_VentaHugos/src/com/Hugos/View/HomeAdmin.fxml</file>
-            <file>file:/C:/Users/NACHO/Documents/NetBeansProjects/PuntoDE_VentaHugos/src/com/Hugos/View/FXMLRegistro.fxml</file>
-        </group>
-    </open-files>
-</project-private>
->>>>>>> master
-=======
->>>>>>> master
