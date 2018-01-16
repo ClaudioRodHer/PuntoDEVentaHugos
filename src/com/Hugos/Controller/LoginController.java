@@ -50,6 +50,7 @@ public class LoginController implements Initializable {
             switch (tipus) {
                 case "Administrador":
                     {
+                        ((Node) (evento.getSource())).getScene().getWindow().hide();
                         Parent adm = FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeAdmin.fxml"));
                         Stage stage = new Stage();
                         Scene scene = new Scene(adm);
@@ -81,32 +82,7 @@ public class LoginController implements Initializable {
         } catch (Exception e) {
         }
 
-        //Statement cajero = (Statement) con.createStatement();
-        //String cajero = "SELECT * FROM empleado WHERE Puesto='Cajero';";
-
-        /*if (txtUsuario.getText().equals(cajero) && passUsuario.getText().equals(cajero)) {
-            ((Node) (evento.getSource())).getScene().getWindow().hide();//esta linea oculta la ventana anterior
-            //apartir de aqui se hace el llamado a la interfaz del menu
-            Parent menu = FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeCajero.fxml"));
-            Stage stage = new Stage();
-            Scene scene = new Scene(menu);
-            stage.setScene(scene);
-            stage.setTitle("Menu");
-            stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
-            stage.show();
-        } else if (txtUsuario.getText().equals(admins) && passUsuario.getText().equals(admins)) {
-            Parent adm = FXMLLoader.load(getClass().getResource("/com/Hugos/View/HomeAdmin.fxml"));
-            Stage stage = new Stage();
-            Scene scene = new Scene(adm);
-            stage.setScene(scene);
-            stage.setTitle("Administrador");
-            stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
-            stage.show();
-        } else {
-            JOptionPane.showMessageDialog(null, "Usuario Incorrecto");
-            txtUsuario.setText("");
-            passUsuario.setText("");
-        }*/
+        
     }
 
     //-----------BOTON DE CANCELAR--------------------------------//
