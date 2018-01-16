@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -64,7 +67,65 @@
             </Tab>
             <Tab text="Stock">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="517.0" prefWidth="904.0">
+                           <children>
+                              <Button layoutX="57.0" layoutY="41.0" mnemonicParsing="false" text="Ver Todo">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField layoutX="57.0" layoutY="83.0" prefHeight="26.0" prefWidth="231.0" promptText="ingresa producto">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <TableView layoutX="25.0" layoutY="119.0" prefHeight="330.0" prefWidth="730.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="N°" />
+                                    <TableColumn prefWidth="257.0" text="Nombre" />
+                                    <TableColumn prefWidth="272.0" text="Descripcion" />
+                                    <TableColumn prefWidth="125.0" text="Cantidad" />
+                                 </columns>
+                              </TableView>
+                              <Button layoutX="309.0" layoutY="83.0" mnemonicParsing="false" text="Buscar">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="65.0" layoutY="477.0" mnemonicParsing="false" text="Volver">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="196.0" layoutY="477.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="243.0" text="Ver Estadisticas">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="517.0" layoutY="477.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="208.0" text="Ingresar producto">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <SplitMenuButton layoutX="413.0" layoutY="41.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="243.0" text="--Ver por producto--">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" text="Action 1" />
+                                    <MenuItem mnemonicParsing="false" text="Action 2" />
+                                 </items>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </SplitMenuButton>
+                              <Button layoutX="663.0" layoutY="41.0" mnemonicParsing="false" stylesheets="@../../../../../Stock/src/60f41dbd-467e-4138-a37c-8ecdc621d501/buttons/code/stylesheets/main.css" text="Aceptar">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
               </content>
             </Tab>
             <Tab text="Corte de caja">

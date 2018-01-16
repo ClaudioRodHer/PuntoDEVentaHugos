@@ -43,7 +43,7 @@ public class AgregarEmpleadoController implements Initializable {
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/HugosDB", "root", "");
             Statement estado = (Statement) con.createStatement();
             estado.executeUpdate("INSERT INTO empleado(nombre,apellido1,apellido2,telefono,puesto,Contraseña) VALUES('"
-                    + txtNombre.getText() + "',"
+                    + txtNombre.    getText() + "',"
                     + "'" + txtApePat.getText() + "'"
                     + ",'" + txtApeMat.getText() + "','" + txtTelefono.getText() + "','"
                     + cmbPuesto.getSelectionModel().getSelectedItem() + "','"
@@ -122,7 +122,8 @@ public class AgregarEmpleadoController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        cmbPuesto.getItems().addAll("Administrador", "Cajero", "Repartidor");
+      //  cmbPuesto.getItems().addAll("Administrador", "Cajero", "Repartidor");
+      cmbPuesto.getItems().addAll("Administrador", "Cajero", "Repartidor");
        //nel
     }
 
