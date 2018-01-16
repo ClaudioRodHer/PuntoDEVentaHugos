@@ -1,5 +1,6 @@
 package com.Hugos.Controller;
 
+import com.Hugos.ConectionDB.ConeccionUsers;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Driver;
 import com.mysql.jdbc.Statement;
@@ -36,29 +37,25 @@ public class AgregarEmpleadoController implements Initializable {
     @FXML
     private TableView tabla;
 
+     ConeccionUsers cc = new ConeccionUsers();
+    Connection cn = cc.conexion();
     @FXML
     private void btnAgregarAction() throws ClassNotFoundException {
-        /*try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/HugosDB", "root", "");
-            Statement estado = (Statement) con.createStatement();
-            estado.executeUpdate("INSERT INTO empleado(nombre,apellido1,apellido2,telefono,puesto,Contraseña) VALUES('"
+        try {
+            
+            Statement estado = (Statement) cn.createStatement();
+            estado.executeUpdate("INSERT INTO empleado(nombre,apellido1,apellido2,telefono,puesto,Contrasena) VALUES('"
                     + txtNombre.    getText() + "',"
                     + "'" + txtApePat.getText() + "'"
                     + ",'" + txtApeMat.getText() + "','" + txtTelefono.getText() + "','"
                     + cmbPuesto.getSelectionModel().getSelectedItem() + "','"
                     + txtContraseña.getText() + "')");
-            
-           // mostrar();
-            
-
-        } catch (SQLException ex) {
+          } catch (SQLException ex) {
             System.out.println("Error en MySQL: " + ex.getMessage());
-        } catch (ClassNotFoundException err) {
-            err.printStackTrace();
         } catch (Exception err) {
             System.out.println("se ha encontrado un error inesperado que es " + err.getMessage());
-        }*/
+        }
+        
     }
 
     @FXML

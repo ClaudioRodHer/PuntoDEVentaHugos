@@ -174,10 +174,10 @@
                      <children>
                         <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="453.0" prefWidth="792.0">
                            <children>
-                              <Button fx:id="btnEliminar" layoutX="558.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnEliminarAction" text="Eliminar" />
-                              <Button fx:id="btnModificar" layoutX="396.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnModificarAction" text="Modificar" />
-                              <Button fx:id="btnNuevo" layoutX="270.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnNuevoAction" text="Nuevo" />
-                              <Button fx:id="btnAgregar" layoutX="82.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnAgregarAction" text="Agregar" />
+                              <Button fx:id="btnEliminar" layoutX="558.0" layoutY="348.0" mnemonicParsing="false" text="Eliminar" />
+                              <Button fx:id="btnModificar" layoutX="396.0" layoutY="346.0" mnemonicParsing="false" text="Modificar" />
+                              <Button fx:id="btnNuevo" layoutX="270.0" layoutY="346.0" mnemonicParsing="false" text="Nuevo" />
+                              <Button fx:id="btnAgregar" layoutX="82.0" layoutY="348.0" mnemonicParsing="false" text="Agregar" />
                               <ComboBox fx:id="cmbPuesto" layoutX="367.0" layoutY="129.0" prefWidth="150.0" promptText="Puestos" />
                               <TextField fx:id="txtContraseña" layoutX="126.0" layoutY="201.0" prefHeight="26.0" prefWidth="168.0" promptText="Contraseña" />
                               <TextField fx:id="txtTelefono" layoutX="125.0" layoutY="164.0" promptText="Telefono" />
