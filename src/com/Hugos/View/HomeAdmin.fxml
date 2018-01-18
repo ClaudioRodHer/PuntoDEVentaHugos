@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.Controller.HomeAdminController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Hugos.Controller.HomeAdminController">
    <children>
       <ImageView fitHeight="678.0" fitWidth="966.0" layoutX="-47.0" layoutY="-38.0">
          <image>
@@ -192,5 +192,7 @@
             </Tab>
         </tabs>
       </TabPane>
+      <Button layoutX="631.0" layoutY="34.0" mnemonicParsing="false" text="Hacer una venta" />
+      <Button layoutX="773.0" layoutY="34.0" mnemonicParsing="false" text="Cerrar sesión" />
    </children>
 </Pane>
