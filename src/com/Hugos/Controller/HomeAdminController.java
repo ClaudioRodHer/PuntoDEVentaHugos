@@ -50,7 +50,7 @@ public class HomeAdminController implements Initializable {
     @FXML
     private void btnAgregarAction() throws ClassNotFoundException {
         try {
-           
+           //
             Statement estado = (Statement) cn.createStatement();
             estado.executeUpdate("INSERT INTO empleado(nombre,apellido1,apellido2,telefono,Puesto,horaEntrada,horaSalida,contrasenia) VALUES('"
                     + txtNombre.    getText() + "','"
