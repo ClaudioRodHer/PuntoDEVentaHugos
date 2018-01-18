@@ -5,11 +5,14 @@
  */
 package com.Hugos.Controller;
 
+import  java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-//import javafx.event.ActionEvent;
-//import javafx.fxml.FXML;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+
 //import javafx.scene.control.ComboBox;
 
 /**
@@ -28,6 +31,12 @@ public class ORDEN_PARA_LLEVARController implements Initializable {
         cmbSeleccionR.disableProperty();
     }
    */
+
+  
+    
+    
+    
+    
     @Override
    
     public void initialize(URL url, ResourceBundle rb) {

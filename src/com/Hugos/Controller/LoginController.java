@@ -40,7 +40,7 @@ public class LoginController implements Initializable {
         //Statement admin = (Statement) con.createStatement();
         String tipus = "";
         String Users = "SELECT * FROM empleado WHERE nombre='" + txtUsuario.getText()
-                + "' AND Contrasena='" + passUsuario.getText() + "';";
+                + "' AND Contrasenia='" + passUsuario.getText() + "';";
         try {
             Statement st = (Statement) cn.createStatement();
             ResultSet rs = st.executeQuery(Users);
@@ -102,6 +102,7 @@ public class LoginController implements Initializable {
         Scene scene = new Scene(RegEntrada);
         stage.setScene(scene);
         stage.setTitle("Registro de llegada");
+        stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
         stage.show();
     }
 
