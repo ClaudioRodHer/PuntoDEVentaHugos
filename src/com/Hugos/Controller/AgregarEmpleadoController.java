@@ -30,32 +30,37 @@ public class AgregarEmpleadoController implements Initializable {
     private TextField txtTelefono;
     @FXML
     private ComboBox cmbPuesto;
-
+    @FXML
+    private TextField txthoraEntrada;
+    @FXML
+    private TextField txthoraSalida;
     @FXML
     private TextField txtContraseña;
 
     @FXML
     private TableView tabla;
-
-     ConeccionUsers cc = new ConeccionUsers();
+    ConeccionUsers cc = new ConeccionUsers();
     Connection cn = cc.conexion();
     @FXML
     private void btnAgregarAction() throws ClassNotFoundException {
         try {
-            
+
             Statement estado = (Statement) cn.createStatement();
-            estado.executeUpdate("INSERT INTO empleado(nombre,apellido1,apellido2,telefono,puesto,Contrasena) VALUES('"
-                    + txtNombre.    getText() + "',"
-                    + "'" + txtApePat.getText() + "'"
-                    + ",'" + txtApeMat.getText() + "','" + txtTelefono.getText() + "','"
+            estado.executeUpdate("INSERT INTO empleado(nombre,apellido1,apellido2,telefono,puesto,horaEntrada,horaSalida,Contrasenia) VALUES('"
+                    + txtNombre.getText() + "','"
+                    + txtApePat.getText() + "','"
+                    + txtApeMat.getText() + "','"
+                    + txtTelefono.getText() + "','"
                     + cmbPuesto.getSelectionModel().getSelectedItem() + "','"
+                    + txthoraEntrada.getText() + "','"
+                    + txthoraSalida.getText() + "','"
                     + txtContraseña.getText() + "')");
-          } catch (SQLException ex) {
+        } catch (SQLException ex) {
             System.out.println("Error en MySQL: " + ex.getMessage());
         } catch (Exception err) {
             System.out.println("se ha encontrado un error inesperado que es " + err.getMessage());
         }
-        
+
     }
 
     @FXML
@@ -73,7 +78,7 @@ public class AgregarEmpleadoController implements Initializable {
 
     }
 
-   /* @FXML
+    /* @FXML
     //private void tblTablaAction() {
     private void mostrar() {
         try {
@@ -116,12 +121,11 @@ public class AgregarEmpleadoController implements Initializable {
             System.out.println("se ha encontrado un error inesperado que es " + err.getMessage());
         }
     }*/
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-      //  cmbPuesto.getItems().addAll("Administrador", "Cajero", "Repartidor");
-      cmbPuesto.getItems().addAll("Administrador", "Cajero", "Repartidor");
-       //nel
+        //  cmbPuesto.getItems().addAll("Administrador", "Cajero", "Repartidor");
+        cmbPuesto.getItems().addAll("Administrador", "Cajero", "Repartidor");
+        //nel
     }
 
 }

@@ -22,7 +22,6 @@ import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
 public class LoginController implements Initializable {
-
     //variables del textfield y del passwordfiel
     @FXML
     private TextField txtUsuario;

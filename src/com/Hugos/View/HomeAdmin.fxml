@@ -179,11 +179,13 @@
                               <Button fx:id="btnNuevo" layoutX="259.0" layoutY="339.0" mnemonicParsing="false" text="Nuevo" />
                               <Button fx:id="btnAgregar" layoutX="115.0" layoutY="339.0" mnemonicParsing="false" text="Agregar" />
                               <ComboBox fx:id="cmbPuesto" layoutX="367.0" layoutY="129.0" prefWidth="150.0" promptText="Puestos" />
-                              <TextField fx:id="txtContraseña" layoutX="126.0" layoutY="201.0" prefHeight="26.0" prefWidth="168.0" promptText="Contraseña" />
+                              <TextField fx:id="txtContraseña" layoutX="127.0" layoutY="280.0" prefHeight="26.0" prefWidth="168.0" promptText="Contraseña" />
                               <TextField fx:id="txtTelefono" layoutX="125.0" layoutY="164.0" promptText="Telefono" />
                               <TextField fx:id="txtApeMat" layoutX="125.0" layoutY="129.0" promptText="Apellido Materno" />
                               <TextField fx:id="txtApePat" layoutX="125.0" layoutY="94.0" promptText="Apellido Paterno" />
                               <TextField fx:id="txtNombre" layoutX="125.0" layoutY="59.0" promptText="Nombre" />
+                              <TextField layoutX="125.0" layoutY="201.0" promptText="Hora Entrada HH:MM:SS" />
+                              <TextField layoutX="125.0" layoutY="242.0" promptText="Hora Salida HH:MM:SS" />
                            </children>
                         </AnchorPane>
                      </children>

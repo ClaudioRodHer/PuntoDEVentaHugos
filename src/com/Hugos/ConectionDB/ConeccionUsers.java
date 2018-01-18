@@ -7,7 +7,6 @@ import java.sql.SQLException;
 public class ConeccionUsers {
 //lopoikl
     Connection conect = null;
-
     public Connection conexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
