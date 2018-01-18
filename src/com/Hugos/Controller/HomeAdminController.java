@@ -52,13 +52,13 @@ public class HomeAdminController implements Initializable {
         try {
            
             Statement estado = (Statement) cn.createStatement();
-            estado.executeUpdate("INSERT INTO empleado(nombre,apellido1,apellido2,telefono,puesto,horaEntrada,horaSalida,Contrasenia) VALUES('"
+            estado.executeUpdate("INSERT INTO empleado(nombre,apellido1,apellido2,telefono,Puesto,horaEntrada,horaSalida,contrasenia) VALUES('"
                     + txtNombre.    getText() + "','"
                     + txtApePat.getText() + "','"
                     + txtApeMat.getText() + "','" 
                     + txtTelefono.getText() + "','"
                     + cmbPuesto.getSelectionModel().getSelectedItem() + "','"
-                    + txthoraEntrada.getText()+"','"
+                    + txthoraEntrada.getText()+"','"    
                     + txthoraSalida.getText()+"','"
                     + txtContraseña.getText() + "')");
           } catch (SQLException ex) {
