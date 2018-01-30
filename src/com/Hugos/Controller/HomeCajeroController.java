@@ -11,9 +11,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 public class HomeCajeroController implements Initializable {
+    
+    
+    
+     
     //sjfsof
     //-----------------CERRAR SESION---mostrar()---------------
     @FXML
@@ -24,6 +30,7 @@ public class HomeCajeroController implements Initializable {
         Scene scene=new Scene(cerrarS);
         stage.setScene(scene);
         stage.setTitle("Login");
+        stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
         stage.show();
         //soy nacho :V 
     }
@@ -35,27 +42,30 @@ public class HomeCajeroController implements Initializable {
     //-------------------ACEPTAR ORDEN-------------------------
     @FXML
     private void btnAceptarOrdenAction(ActionEvent evento) throws IOException{
-        Parent menu=FXMLLoader.load(getClass().getResource("/com/Hugos/View/ORDEN_PARA_LLEVAR.fxml"));
-            Stage stage=new Stage();
-            Scene scene=new Scene(menu);
-            stage.setScene(scene);
-            stage.setTitle("¿Orden para llevar?");
-            stage.show();
+        Parent AceptarOrden = FXMLLoader.load(getClass().getResource("/com/Hugos/View/ORDENPARALLEVAR.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(AceptarOrden);
+        stage.setScene(scene);
+        stage.setTitle("Orden para llevar");
+        stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
+        stage.show();
     }
-    //-----------------REGISTRO LLEGADA------------------------
+    //-----------------REGISTRO ENTRADA------------------------
     @FXML
     private void btnRegistroAction(ActionEvent evento) throws IOException{
-        Parent llegada=FXMLLoader.load(getClass().getResource("/com/Hugos/View/RegisroEntrada.fxml"));
-        Stage stage =new Stage();
-        Scene scene=new Scene(llegada);
+     Parent RegEntrada = FXMLLoader.load(getClass().getResource("/com/Hugos/View/RegistroEntrada.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(RegEntrada);
         stage.setScene(scene);
-        stage.setTitle("LLegada");
+        stage.setTitle("Registro de llegada");
+        stage.getIcons().add(new Image("/com/Hugos/Resources/hugo.png"));
         stage.show();
         
     }
     //-----------------IMPRIMIR TICKET-----------------------
     @FXML
-    private void btnImprimirticketAction(ActionEvent evento){
+    private void btnImprimirticketAction(ActionEvent evento) throws IOException{
+       
     
     }
 //------------------------------------------------------------------------------
@@ -63,6 +73,10 @@ public class HomeCajeroController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
+       // initComponents();
+        //Dimension d=Toolkit.getDefaultToolkit().getScreenSize();
+       // this.setSize((int) d.getWidth() , (int) d.getHeight());
     }    
     
 }

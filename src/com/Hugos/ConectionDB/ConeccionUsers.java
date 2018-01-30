@@ -11,7 +11,7 @@ public class ConeccionUsers {
     public Connection conexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conect = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/HugosDB", "root", "");
+            conect = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/DBHugos", "root", "");
 
             // mostrar();
         } catch (SQLException ex) {
