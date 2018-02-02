@@ -34,7 +34,12 @@ public class LoginController implements Initializable {
     //ahi es donde se hara la accion del boton para poder hacer el evento del 
     ConeccionUsers cc = new ConeccionUsers();
     Connection cn = cc.conexion();
-
+    /**
+     * 
+     * @param evento
+     * @throws IOException
+     * @throws SQLException 
+     */
     @FXML
     private void btnAceptarAction(ActionEvent evento) throws IOException, SQLException {
         //Statement admin = (Statement) con.createStatement();
@@ -86,6 +91,11 @@ public class LoginController implements Initializable {
     }
 
     //-----------BOTON DE CANCELAR--------------------------------//
+    /**
+     * 
+     * @param evento 
+     */
+    
     @FXML
     private void BtnCancelarAction(ActionEvent evento) {
         JOptionPane.showMessageDialog(null, "Hasta la proxima");
@@ -93,6 +103,11 @@ public class LoginController implements Initializable {
     }
 
     //-----------BOTON DE REGISTRO DE LA ENTRADA DE LOS EMPLEADOS---------------//
+   /**
+    * 
+    * @param evento
+    * @throws IOException 
+    */
     @FXML
     private void BtnRegistroEntradaAction(ActionEvent evento) throws IOException {
         // ((Node)(evento.getSource())).getScene().getWindow().hide();//esta linea oculta la ventana anterior
@@ -107,6 +122,11 @@ public class LoginController implements Initializable {
     }
 
     //---------------------BTNREGUSUARIO----------------------------------
+    /**
+     * 
+     * @param evento
+     * @throws IOException 
+     */
     @FXML
     private void btnReguserAction(ActionEvent evento) throws IOException {
 
@@ -121,6 +141,10 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+       int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+       //this.setBounds((ancho / 2) - (this.getWidth() / 2), (alto / 2) - (this.getHeight() / 2), 500, 500);
+         
     }
 
 }
